@@ -1,0 +1,81 @@
+.main{
+  min-height: 100vh;
+}
+
+.side-menu {
+  position: fixed;
+  background: #7D30FA;
+  width: 20vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-menu .brand-name {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-menu li {
+  font-size: 24px;
+  padding: 10px 40px;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+.side-menu li:hover {
+  background: white;
+  color: #7D30FA;
+}
+
+.container {
+  position: absolute;
+  right: 0;
+  width: 80vw;
+  height: 100vh;
+  background: #f1f1f1;
+}
+
+.usersTableContainer{
+  height: 300px;
+  Overflow-y:auto;
+  table-layout: fixed;
+  margin: auto 50px;
+  width: 100vh;
+}
+
+.usersTableContainer thead, th {
+  position: sticky;
+  top: 0;
+}
+
+.styled-table thead tr {
+  background-color: #7D30FA;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #7D30FA  ;
+}
+
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #7D30FA;
+}
