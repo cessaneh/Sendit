@@ -1,0 +1,33 @@
+.parceldetailcard {
+  margin: 50px auto;
+  width: 95%;
+  border: 2px #7D30FA solid;
+}
+
+.parcelcardheader {
+  height: 10%;  
+  background: #7D30FA;
+  color: white;
+  text-align: center;
+}
+
+.my-parcel-detail{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+h3{
+  text-align: center;
+  font-family: "Righteous", sans-serif;
+  font-size: 1.8rem;
+  color: rgb(7, 0, 0);
+  text-transform: uppercase;
+}
+
+p{
+  font-family: "Lato", sans-serif;
+  color: rgb(7, 0, 0);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
