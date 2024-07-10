@@ -241,6 +241,7 @@ body {
 .toggle-right {
   right: 0;
   transform: translateX(0);
+  
 }
 
 .container.active .toggle-right {
