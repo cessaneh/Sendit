@@ -1,0 +1,27 @@
+.contact-us-container {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--dl-color-backgrounds-gray);
+}
+.contact-us-navbar1 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-us-contactform2 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

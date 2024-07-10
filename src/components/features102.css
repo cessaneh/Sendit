@@ -1,0 +1,105 @@
+.features102-layout300 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+  background-color: var(--dl-color-theme-secondary1);
+}
+.features102-max-width {
+  gap: var(--dl-space-space-threeunits);
+  align-items: center;
+}
+.features102-section-title {
+  align-self: flex-start;
+  align-items: center;
+}
+.features102-text {
+  fill: var(--dl-color-theme-primary1);
+  color: var(--dl-color-theme-primary1);
+  align-self: flex-start;
+}
+.features102-text1 {
+  align-self: flex-start;
+}
+.features102-text2 {
+  align-self: flex-start;
+  text-align: left;
+}
+.features102-content {
+  align-self: stretch;
+  align-items: center;
+}
+.features102-feature1 {
+  align-items: flex-start;
+  border-radius: var(--dl-radius-radius-buttonradius);
+  background-color: var(--dl-color-theme-accent2);
+}
+.features102-feature1-title {
+  padding: var(--dl-space-space-unit);
+  align-self: center;
+  text-align: center;
+}
+.features102-feature1-description {
+  padding-top: 0px;
+  padding-left: var(--dl-space-space-unit);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-unit);
+}
+.features102-feature2 {
+  align-items: flex-start;
+  border-radius: var(--dl-radius-radius-buttonradius);
+  background-color: var(--dl-color-grays-white100);
+}
+.features102-feature2-title {
+  padding: var(--dl-space-space-unit);
+  align-self: center;
+}
+.features102-feature2-description {
+  padding-top: 0px;
+  padding-left: var(--dl-space-space-unit);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-unit);
+}
+.features102-feature3 {
+  align-items: flex-start;
+  border-radius: var(--dl-radius-radius-buttonradius);
+  background-color: var(--dl-color-theme-accent2);
+}
+.features102-feature3-title {
+  padding: var(--dl-space-space-unit);
+  align-self: center;
+}
+.features102-feature3-description {
+  padding-top: 0px;
+  padding-left: var(--dl-space-space-unit);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-unit);
+}
+@media(max-width: 991px) {
+  .features102-section-title {
+    width: 100%;
+  }
+}
+@media(max-width: 767px) {
+  .features102-section-title {
+    width: auto;
+  }
+  .features102-text1 {
+    text-align: center;
+  }
+  .features102-feature2 {
+    width: auto;
+  }
+  .features102-feature3 {
+    width: auto;
+  }
+}
+@media(max-width: 479px) {
+  .features102-max-width {
+    gap: var(--dl-space-space-oneandhalfunits);
+  }
+}
