@@ -12,7 +12,7 @@ function Help() {
     <div className="admin-main">
       <div className="admin-side-menu">
         <div className="admin-brand-name">
-          <h1>SendIt</h1>
+          <h1>Parcel pro</h1>
         </div>
         <ul>
           <Link to={'/admin_dashboard'}><li><img src={dash} alt="" />&nbsp; <span>Dashboard</span></li></Link>
