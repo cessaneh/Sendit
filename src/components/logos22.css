@@ -1,0 +1,40 @@
+.logos22-container {
+  gap: var(--dl-space-space-threeunits);
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+}
+.logos22-max-width {
+  gap: var(--dl-space-space-twounits);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.logos22-text {
+  fill: var(--dl-color-theme-primary1);
+  color: var(--dl-color-theme-primary1);
+  width: 100%;
+  text-align: center;
+}
+.logos22-text1 {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+}
+@media(max-width: 991px) {
+  .logos22-text {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media(max-width: 767px) {
+  .logos22-container {
+    gap: var(--dl-space-space-twounits);
+  }
+  .logos22-max-width {
+    gap: var(--dl-space-space-twounits);
+  }
+}
