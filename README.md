@@ -1,4 +1,4 @@
-<h1 align="center">Delivery System App</h1>
+<h1 align="center">Delivery System App(sendit)</h1>
 
 # Table of Contents
 - [Installation](##Installation)
@@ -6,5 +6,3 @@
 - [Features](##Features)
 - [Contributing](##Contributing)
 - [Authors](##Authors)
-
-
