@@ -20,7 +20,7 @@ function Orders() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`https://sendit-backend-qhth.onrender.com/orders`, {
+    fetch(``, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
