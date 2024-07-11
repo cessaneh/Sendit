@@ -1,31 +1,35 @@
 {
   "name": "parcel-pro",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.7.2",
+    "@craco/craco": "^7.1.0",
+    "@google/maps": "^1.1.3",
+    "@react-google-maps/api": "^2.19.3",
+    "axios": "^1.6.8",
+    "classnames": "^2.5.1",
+    "dotenv": "^16.4.5",
+    "formik": "^2.4.6",
     "jwt-decode": "^4.0.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "prop-types": "15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-geocode": "^1.0.0-alpha.1",
     "react-helmet": "^6.1.0",
-    "react-router-dom": "^6.24.1",
-    "react-scripts": "^5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^5.2.0",
+    "use-script": "^3.0.0",
+    "yup": "^1.4.0",
+    "zxcvbn": "^4.4.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test --env=jsdom",
+    "eject": "craco eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "engines": {
+    "node": "18.x"
   },
   "browserslist": {
     "production": [
@@ -38,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-scripts": "^5.0.1"
   }
 }
