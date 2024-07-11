@@ -10,7 +10,7 @@ function OrderDetail({order, onClose}) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`https://sendit-backend-qhth.onrender.com/orders/${order.id}`, {
+    fetch(`${order.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

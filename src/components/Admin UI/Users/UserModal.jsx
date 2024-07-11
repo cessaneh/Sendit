@@ -7,7 +7,7 @@ const UserModal = ({ user, onClose }) => {
   const [email, setEmail] = useState(user.email);
 
   const handleUpdate = () => {
-    fetch(`https://sendit-backend-qhth.onrender.com/users/${user.id}`, {
+    fetch(`${user.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

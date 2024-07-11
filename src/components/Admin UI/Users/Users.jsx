@@ -15,7 +15,7 @@ function Users() {
   const [showModal, setShowModal] = useState(false);
 
   const fetchUsers = () => {
-    fetch(`https://sendit-backend-qhth.onrender.com/users`, {
+    fetch(``, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }

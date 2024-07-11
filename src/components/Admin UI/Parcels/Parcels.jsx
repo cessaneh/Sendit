@@ -17,7 +17,7 @@ function Parcels() {
   const token = localStorage.getItem('token')
 
   const fetchParcels = () => {
-    fetch(`https://sendit-backend-qhth.onrender.com/parcels`, {
+    fetch(``, {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`

@@ -28,7 +28,7 @@ function Dashboard() {
         return;
       }
 
-      const response = await axios.get('https://sendit-backend-qhth.onrender.com/logout', {
+      const response = await axios.get('', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
