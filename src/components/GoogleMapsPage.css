@@ -1,0 +1,78 @@
+/* GoogleMapsPage.css */
+
+/* Center the page content and add some padding */
+.maps-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #f0f0f0; /* Light background color for contrast */
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif; /* Use a clean, modern font */
+}
+
+/* Style the header */
+.maps-page h1 {
+  margin-bottom: 20px;
+  font-size: 32px; /* Increase font size for better visibility */
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  color: #6a0dad; /* Purple color for the header */
+  text-transform: uppercase; /* Uppercase for a more prominent header */
+  letter-spacing: 1.5px; /* Add some letter spacing */
+  transition: color 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+.maps-page h1:hover {
+  color: #ffb6c1; /* Light pink color on hover for contrast */
+}
+
+.maps-page p {
+  margin-bottom: 30px;
+  font-size: 18px; /* Font size for better readability */
+  color: #333; /* Dark color for good contrast */
+  text-align: center; /* Center-align the text */
+}
+
+/* Adjust the map container size and styling */
+.map-container {
+  width: 80vw; /* Slightly increase width for better viewing */
+  height: 70vh; /* Slightly adjust height */
+  max-width: 1000px;
+  max-height: 800px; /* Adjust max height */
+  position: relative;
+  z-index: 1;
+  border-radius: 15px; /* Subtler rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Enhance the shadow for more depth */
+  overflow: hidden;
+  background-color: #fff; /* White background for a clean look */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+.map-container:hover {
+  transform: scale(1.02); /* Slightly scale up on hover */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Add a subtle animation to the map container */
+.map-container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.1));
+  pointer-events: none; /* Allow interactions with the map */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 2;
+}
+
+.map-container:hover:before {
+  opacity: 1; /* Show gradient overlay on hover */
+}
