@@ -1,0 +1,12 @@
+.welcome-container {
+  display: flex;
+  position: relative;
+  
+}
+.welcome-text {
+  font-style: normal;
+  margin-top: var(--dl-space-space-twounits);
+  font-weight: 800;
+  margin-left: var(--dl-space-space-halfunit);
+  margin-bottom: var(--dl-space-space-twounits);
+}
