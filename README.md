@@ -12,10 +12,13 @@ This is a delivery system app that allows users to deliver parcels to different 
 
 # Installation
 1. Clone the repository:
+
  git clone https://github.com/Tunchihill/Parcel-pro-frontend.git
 
 2. Change into the project directory.
+
 cd Parcel-pro-frontend
 
 3. Install the required dependancies
+
 npm install
