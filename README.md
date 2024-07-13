@@ -23,10 +23,10 @@ This is a delivery system app that allows users to deliver parcels to different 
 cd Parcel-pro-frontend
 ```
 
-3. Install the required dependencies.
+3. Run the app in the server
 
 ```bash
-npm install
+npm start
 ```
 
 ## Features
