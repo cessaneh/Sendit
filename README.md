@@ -13,7 +13,7 @@ This is a delivery system app that allows users to deliver parcels to different 
 # Installation
 1. Clone the repository:
 ```bash
- git clone https://github.com/Tunchihill/Parcel-pro-frontend.git
+ git clone git@github.com:Tunchihill/Sendit-frontend.git
 ```
 
 
@@ -29,8 +29,17 @@ cd Parcel-pro-frontend
 npm start
 ```
 
-## Features
+# Features
 
 - * Users can change the destination of their parcels
 - * Users can cancel a parcel delivery order
 - * Users can see a list of delivery orders they have made if they have made any
+
+# Authors
+
+- [Tunchihill](https://github.com/Tunchihill)
+- [cessaneh](https://github.com/cessaneh)
+- [kimwereafk](https://github.com/kimwereafk)
+- [trevorsworld](https://github.com/trevorsworld)
+
+
