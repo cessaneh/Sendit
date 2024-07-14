@@ -55,7 +55,7 @@ const UserDashboard = (props) => {
       if (!userId) return;
 
       try {
-        const response = await fetch(`https://sendit-backend-qhth.onrender.com/users/${userId}`, {
+        const response = await fetch(`https://github.com/kimwereafk/Parcel-Pro-backend`, {
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ const UserDashboard = (props) => {
       if (!userId) return;
 
       try {
-        const response = await fetch(`https://sendit-backend-qhth.onrender.com/users/${userId}/parcels`, {
+        const response = await fetch(`https://github.com/kimwereafk/Parcel-Pro-backend`, {
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json',

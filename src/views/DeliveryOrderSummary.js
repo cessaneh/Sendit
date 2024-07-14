@@ -32,7 +32,7 @@ const DeliveryOrderSummary = () => {
           return;
         }
 
-        const response = await axios.get(`https://sendit-backend-qhth.onrender.com/users/${userId}/parcels`, {
+        const response = await axios.get(`https://github.com/kimwereafk/Parcel-Pro-backend`, {
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`,
@@ -64,7 +64,7 @@ const DeliveryOrderSummary = () => {
       return;
     }
 
-    const response = await axios.post(`https://sendit-backend-qhth.onrender.com/parcels/${parcelId}/cancel`, null, {
+    const response = await axios.post(`https://github.com/kimwereafk/Parcel-Pro-backend`, null, {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
@@ -96,10 +96,10 @@ const DeliveryOrderSummary = () => {
       return;
     }
 
-    console.log('Sending PUT request to:', `https://sendit-backend-qhth.onrender.com/parcels/${parcelId}/destination`);
+    console.log('Sending PUT request to:', `https://github.com/kimwereafk/Parcel-Pro-backend`);
     console.log('Request data:', { destination: newDestination });
 
-    const response = await axios.put(`https://sendit-backend-qhth.onrender.com/parcels/${parcelId}/destination`, { destination: newDestination }, {
+    const response = await axios.put(`https://github.com/kimwereafk/Parcel-Pro-backend`, { destination: newDestination }, {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
