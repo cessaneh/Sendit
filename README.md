@@ -20,7 +20,7 @@ This is a delivery system app that allows users to deliver parcels to different 
 2. Change into the project directory.
 
 ```bash
-cd Parcel-pro-frontend
+cd Sendit-frontend
 ```
 
 3. Run the app in the server
