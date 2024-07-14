@@ -80,7 +80,7 @@ const NewDeliveryOrder = () => {
       }
 
       const response = await axios.post(
-        'https://sendit-backend-qhth.onrender.com/parcels',
+        'https://github.com/kimwereafk/Parcel-Pro-backend',
         {
           pickup_location: formData.pickupLocation,
           destination: formData.deliveryAddress,

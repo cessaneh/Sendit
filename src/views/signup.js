@@ -112,7 +112,7 @@ const SignUp = (props) => {
       setIsLoading(true);
       try {
         const response = await fetch(
-          "https://sendit-backend-qhth.onrender.com/signup",
+          "https://github.com/kimwereafk/Parcel-Pro-backend",
           {
             method: "POST",
             headers: {
@@ -158,7 +158,7 @@ const SignUp = (props) => {
       setIsLoading(true);
       try {
         const response = await fetch(
-          "https://sendit-backend-qhth.onrender.com/login",
+          "https://github.com/kimwereafk/Parcel-Pro-backend",
           {
             method: "POST",
             headers: {
