@@ -5,7 +5,7 @@ import { jwtDecode } from 'jwt-decode'; // Fixed import for jwt-decode
 import './MapWithGeocoding.css';
 
 // Set the API key for Geocode
-setKey('AIzaSyBOzf-XaussCXmQ7jdKxZriWMjLcqPZDbo');
+setKey(process.env.REACT_APP_GEOCODE_API_KEY); // Use environment variable for API key
 setLanguage('en');
 setRegion('ken');
 
@@ -17,7 +17,7 @@ const MapWithGeocoding = () => {
   const [duration, setDuration] = useState('');
 
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: 'AIzaSyBOzf-XaussCXmQ7jdKxZriWMjLcqPZDbo',
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY, // Use environment variable for API key
   });
 
   useEffect(() => {
@@ -43,7 +43,8 @@ const MapWithGeocoding = () => {
     }
   };
 
-  const API_BASE_URL = 'https://sendit-backend-qhth.onrender.com';
+  const API_BASE_URL = 'http://localhost:5000'; // Change based on your backend URL
+
   const fetchParcelData = async () => {
     try {
       const token = localStorage.getItem('token');
@@ -103,7 +104,7 @@ const MapWithGeocoding = () => {
       return { lat, lng };
     } catch (error) {
       console.error('Error geocoding address:', error);
-      return { lat: 0, lng: 0 }; // Default to (0, 0) if geocoding fails
+      return { lat: -1.2921, lng: 36.8219 }; // Fallback to Nairobi, Kenya coordinates
     }
   };
 
