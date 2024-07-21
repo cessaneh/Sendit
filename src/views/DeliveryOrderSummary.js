@@ -32,7 +32,7 @@ const DeliveryOrderSummary = () => {
           return;
         }
 
-        const response = await axios.get(`https://github.com/kimwereafk/Parcel-Pro-backend`, {
+        const response = await axios.get(`http://localhost:5000`, {
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`,
@@ -64,7 +64,7 @@ const DeliveryOrderSummary = () => {
       return;
     }
 
-    const response = await axios.post(`https://github.com/kimwereafk/Parcel-Pro-backend`, null, {
+    const response = await axios.post(`http://localhost:5000`, null, {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
@@ -96,10 +96,10 @@ const DeliveryOrderSummary = () => {
       return;
     }
 
-    console.log('Sending PUT request to:', `https://github.com/kimwereafk/Parcel-Pro-backend`);
+    console.log('Sending PUT request to:', `http://localhost:5000`);
     console.log('Request data:', { destination: newDestination });
 
-    const response = await axios.put(`https://github.com/kimwereafk/Parcel-Pro-backend`, { destination: newDestination }, {
+    const response = await axios.put(`http://localhost:5000`, { destination: newDestination }, {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
