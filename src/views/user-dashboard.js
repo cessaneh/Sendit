@@ -30,8 +30,10 @@ const SignUp = () => {
   const handleSignInClick = () => setIsSignUp(false);
 
   const handleShowPassword = () => setShowPassword(!showPassword);
-  const handleShowConfirmPassword = () => setShowConfirmPassword(!showConfirmPassword);
-  const handleShowLoginPassword = () => setShowLoginPassword(!showLoginPassword);
+  const handleShowConfirmPassword = () =>
+    setShowConfirmPassword(!showConfirmPassword);
+  const handleShowLoginPassword = () =>
+    setShowLoginPassword(!showLoginPassword);
 
   const handlePasswordChange = (event) => {
     const password = event.target.value;
@@ -69,13 +71,21 @@ const SignUp = () => {
 
   const signUpSchema = Yup.object().shape({
     name: Yup.string().required("Name is required"),
-    email: Yup.string().email("Invalid email address").required("Email is required"),
-    password: Yup.string().min(8, "Password must be at least 8 characters").required("Password is required"),
-    confirmPassword: Yup.string().oneOf([Yup.ref("password"), null], "Passwords do not match").required("Confirm Password is required"),
+    email: Yup.string()
+      .email("Invalid email address")
+      .required("Email is required"),
+    password: Yup.string()
+      .min(8, "Password must be at least 8 characters")
+      .required("Password is required"),
+    confirmPassword: Yup.string()
+      .oneOf([Yup.ref("password"), null], "Passwords do not match")
+      .required("Confirm Password is required"),
   });
 
   const signInSchema = Yup.object().shape({
-    email: Yup.string().email("Invalid email address").required("Email is required"),
+    email: Yup.string()
+      .email("Invalid email address")
+      .required("Email is required"),
     password: Yup.string().required("Password is required"),
   });
 
@@ -90,7 +100,7 @@ const SignUp = () => {
     onSubmit: async (values) => {
       setIsLoading(true);
       try {
-        const response = await fetch("http://localhost:5000/signup", {
+        const response = await fetch("http://localhost:5000/users/signup", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -112,7 +122,9 @@ const SignUp = () => {
           setIsSignUp(false);
           throw new Error(data.message || "User already exists. Please Log in");
         } else {
-          throw new Error(data.message || `Sign up failed with status ${response.status}`);
+          throw new Error(
+            data.message || `Sign up failed with status ${response.status}`
+          );
         }
       } catch (error) {
         setIsLoading(false);
@@ -131,7 +143,7 @@ const SignUp = () => {
     onSubmit: async (values) => {
       setIsLoading(true);
       try {
-        const response = await fetch("http://localhost:5000/login", {
+        const response = await fetch("http://localhost:5000/users/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -163,7 +175,12 @@ const SignUp = () => {
   });
 
   return (
-    <div className={`container ${isSignUp ? "active" : ""} ${isLoading ? "loading" : ""}`} id="container">
+    <div
+      className={`container ${isSignUp ? "active" : ""} ${
+        isLoading ? "loading" : ""
+      }`}
+      id="container"
+    >
       {isLoading && <Loader />}
       <div className={`form-container sign-up ${isSignUp ? "active" : ""}`}>
         <form onSubmit={signUpFormik.handleSubmit}>

@@ -30,8 +30,10 @@ const SignUp = () => {
   const handleSignInClick = () => setIsSignUp(false);
 
   const handleShowPassword = () => setShowPassword(!showPassword);
-  const handleShowConfirmPassword = () => setShowConfirmPassword(!showConfirmPassword);
-  const handleShowLoginPassword = () => setShowLoginPassword(!showLoginPassword);
+  const handleShowConfirmPassword = () =>
+    setShowConfirmPassword(!showConfirmPassword);
+  const handleShowLoginPassword = () =>
+    setShowLoginPassword(!showLoginPassword);
 
   const handlePasswordChange = (event) => {
     const password = event.target.value;
@@ -69,13 +71,21 @@ const SignUp = () => {
 
   const signUpSchema = Yup.object().shape({
     name: Yup.string().required("Name is required"),
-    email: Yup.string().email("Invalid email address").required("Email is required"),
-    password: Yup.string().min(8, "Password must be at least 8 characters").required("Password is required"),
-    confirmPassword: Yup.string().oneOf([Yup.ref("password"), null], "Passwords do not match").required("Confirm Password is required"),
+    email: Yup.string()
+      .email("Invalid email address")
+      .required("Email is required"),
+    password: Yup.string()
+      .min(8, "Password must be at least 8 characters")
+      .required("Password is required"),
+    confirmPassword: Yup.string()
+      .oneOf([Yup.ref("password"), null], "Passwords do not match")
+      .required("Confirm Password is required"),
   });
 
   const signInSchema = Yup.object().shape({
-    email: Yup.string().email("Invalid email address").required("Email is required"),
+    email: Yup.string()
+      .email("Invalid email address")
+      .required("Email is required"),
     password: Yup.string().required("Password is required"),
   });
 
@@ -90,7 +100,7 @@ const SignUp = () => {
     onSubmit: async (values) => {
       setIsLoading(true);
       try {
-        const response = await fetch("http://localhost:5000/signup", {
+        const response = await fetch("http://localhost:5000/users/signup", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -128,7 +138,7 @@ const SignUp = () => {
     onSubmit: async (values) => {
       setIsLoading(true);
       try {
-        const response = await fetch("http://localhost:5000/login", {
+        const response = await fetch("http://localhost:5000/users/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -164,7 +174,12 @@ const SignUp = () => {
   });
 
   return (
-    <div className={`container ${isSignUp ? "active" : ""} ${isLoading ? "loading" : ""}`} id="container">
+    <div
+      className={`container ${isSignUp ? "active" : ""} ${
+        isLoading ? "loading" : ""
+      }`}
+      id="container"
+    >
       {isLoading && <Loader />}
       <div className={`form-container sign-up ${isSignUp ? "active" : ""}`}>
         <form onSubmit={signUpFormik.handleSubmit}>
@@ -183,7 +198,9 @@ const SignUp = () => {
             onChange={signUpFormik.handleChange}
             value={signUpFormik.values.name}
           />
-          {signUpFormik.errors.name && <div className="error-message">{signUpFormik.errors.name}</div>}
+          {signUpFormik.errors.name && (
+            <div className="error-message">{signUpFormik.errors.name}</div>
+          )}
           <input
             type="email"
             placeholder="Email"
@@ -192,7 +209,9 @@ const SignUp = () => {
             onChange={signUpFormik.handleChange}
             value={signUpFormik.values.email}
           />
-          {signUpFormik.errors.email && <div className="error-message">{signUpFormik.errors.email}</div>}
+          {signUpFormik.errors.email && (
+            <div className="error-message">{signUpFormik.errors.email}</div>
+          )}
           <div className="password-input-container">
             <input
               type={showPassword ? "text" : "password"}
@@ -209,13 +228,21 @@ const SignUp = () => {
           <div className="password-strength-indicator">
             <div
               className={`strength-bar strength-${passwordStrength}`}
-              style={{ width: `${(passwordStrength / 4) * 100}%`, backgroundColor: passwordStrengthColor }}
+              style={{
+                width: `${(passwordStrength / 4) * 100}%`,
+                backgroundColor: passwordStrengthColor,
+              }}
             ></div>
-            <span className="strength-text" style={{ color: passwordStrengthColor }}>
+            <span
+              className="strength-text"
+              style={{ color: passwordStrengthColor }}
+            >
               {passwordStrengthText}
             </span>
           </div>
-          {signUpFormik.errors.password && <div className="error-message">{signUpFormik.errors.password}</div>}
+          {signUpFormik.errors.password && (
+            <div className="error-message">{signUpFormik.errors.password}</div>
+          )}
           <div className="password-input-container">
             <input
               type={showConfirmPassword ? "text" : "password"}
@@ -225,12 +252,21 @@ const SignUp = () => {
               onChange={signUpFormik.handleChange}
               value={signUpFormik.values.confirmPassword}
             />
-            <span className="show-password-btn" onClick={handleShowConfirmPassword}>
+            <span
+              className="show-password-btn"
+              onClick={handleShowConfirmPassword}
+            >
               {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
             </span>
           </div>
-          {signUpFormik.errors.confirmPassword && <div className="error-message">{signUpFormik.errors.confirmPassword}</div>}
-          <button className="signup" type="submit">Sign Up</button>
+          {signUpFormik.errors.confirmPassword && (
+            <div className="error-message">
+              {signUpFormik.errors.confirmPassword}
+            </div>
+          )}
+          <button className="signup" type="submit">
+            Sign Up
+          </button>
         </form>
       </div>
       <div className={`form-container sign-in ${isSignUp ? "" : "active"}`}>
@@ -250,7 +286,9 @@ const SignUp = () => {
             onChange={signInFormik.handleChange}
             value={signInFormik.values.email}
           />
-          {signInFormik.errors.email && <div className="error-message">{signInFormik.errors.email}</div>}
+          {signInFormik.errors.email && (
+            <div className="error-message">{signInFormik.errors.email}</div>
+          )}
           <div className="password-input-container">
             <input
               type={showLoginPassword ? "text" : "password"}
@@ -260,15 +298,24 @@ const SignUp = () => {
               onChange={signInFormik.handleChange}
               value={signInFormik.values.password}
             />
-            <span className="show-password-btn" onClick={handleShowLoginPassword}>
+            <span
+              className="show-password-btn"
+              onClick={handleShowLoginPassword}
+            >
               {showLoginPassword ? <FaEyeSlash /> : <FaEye />}
             </span>
           </div>
-          {signInFormik.errors.password && <div className="error-message">{signInFormik.errors.password}</div>}
-          <button className="signin" type="submit">Sign In</button>
+          {signInFormik.errors.password && (
+            <div className="error-message">{signInFormik.errors.password}</div>
+          )}
+          <button className="signin" type="submit">
+            Sign In
+          </button>
           <div className="register">
             <p>Don't have an account?</p>
-            <Link to="#" onClick={handleSignUpClick}>Sign Up</Link>
+            <Link to="#" onClick={handleSignUpClick}>
+              Sign Up
+            </Link>
           </div>
         </form>
       </div>
@@ -276,13 +323,19 @@ const SignUp = () => {
         <div className="overlay">
           <div className="overlay-panel overlay-left">
             <h1>Welcome Back!</h1>
-            <p>To keep connected with us please login with your personal info</p>
-            <button className="ghost" id="signIn" onClick={handleSignInClick}>Sign In</button>
+            <p>
+              To keep connected with us please login with your personal info
+            </p>
+            <button className="ghost" id="signIn" onClick={handleSignInClick}>
+              Sign In
+            </button>
           </div>
           <div className="overlay-panel overlay-right">
             <h1>Hello, Friend!</h1>
             <p>Enter your personal details and start your journey with us</p>
-            <button className="ghost" id="signUp" onClick={handleSignUpClick}>Sign Up</button>
+            <button className="ghost" id="signUp" onClick={handleSignUpClick}>
+              Sign Up
+            </button>
           </div>
         </div>
       </div>
